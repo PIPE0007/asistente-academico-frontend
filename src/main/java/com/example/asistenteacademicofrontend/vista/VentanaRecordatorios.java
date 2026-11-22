@@ -75,12 +75,6 @@ public class VentanaRecordatorios extends JFrame {
         add(new JScrollPane(tabla), BorderLayout.CENTER);
         add(botones, BorderLayout.SOUTH);
     }
-
-    @EventListener(ApplicationReadyEvent.class)
-    public void mostrar() {
-        SwingUtilities.invokeLater(() -> setVisible(true));
-    }
-
     private JButton boton(String texto, Runnable accion) {
         JButton boton = new JButton(texto);
         boton.addActionListener(e -> accion.run());
