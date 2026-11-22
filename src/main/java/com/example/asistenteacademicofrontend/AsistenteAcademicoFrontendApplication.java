@@ -1,6 +1,6 @@
 package com.example.asistenteacademicofrontend;
 
-import com.example.asistenteacademicofrontend.vista.VentanaEstudiantes;
+import com.example.asistenteacademicofrontend.vista.VentanaMenu;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -19,7 +19,7 @@ public class AsistenteAcademicoFrontendApplication {
     }
 
     @Bean
-    public CommandLineRunner mostrarVentana(VentanaEstudiantes ventana) {
-        return args -> SwingUtilities.invokeLater(() -> ventana.setVisible(true));
+    public CommandLineRunner mostrarMenu(VentanaMenu menu) {
+        return args -> SwingUtilities.invokeLater(() -> menu.setVisible(true));
     }
 }
